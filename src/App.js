@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Gallery from "./components/gallery";
+import ImageBanner from "./components/imagebanner";
+
+import Navbar from "./components/navbar";
+import Product from "./components/product";
+import Sidebar from "./components/sidebar";
+import Cart from "./elements/cart";
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
+  const [cart, showCart] = useState(false);
+  const [gallery, showGallery] = useState(false);
+  const [items, setItems] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {gallery && <Gallery showGallery={showGallery} />}
+      {cart && <Cart showCart={showCart} items={items} setItems={setItems} />}
+      {sidebar && <Sidebar setSidebar={setSidebar} />}
+      <div className="App">
+        <Navbar
+          showCart={showCart}
+          cart={cart}
+          setSidebar={setSidebar}
+        ></Navbar>
+        <div className="desktop">
+          <ImageBanner showGallery={showGallery} />
+          <Product showCart={showCart} setItems={setItems} />
+        </div>
+        <footer>
+          © 2022 Sneakers clone with react/react-router-dom/state by nfnt
+        </footer>
+      </div>
+    </>
   );
 }
 
