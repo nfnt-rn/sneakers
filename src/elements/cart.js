@@ -6,7 +6,10 @@ import Close from "../images/icon-close.svg";
 
 export default function Cart({ showCart, items, setItems }) {
   return (
-    <div className="cart-item">
+    <div
+      className="cart-item"
+      style={items === null ? { height: "250px" } : { height: "max-content" }}
+    >
       {/* cart header */}
       <div className="cart-header-container">
         <h3 className="cart-header">Cart</h3>
