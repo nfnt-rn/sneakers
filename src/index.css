@@ -300,7 +300,7 @@ li {
   max-width: 400px;
   border-radius: 15px;
   top: 120px;
-  height: 250px;
+  height: max-content;
   right: 20px;
   max-height: 300px;
   overflow: auto;
@@ -359,6 +359,7 @@ li {
 
 .cart-control {
   margin: 0px 20px;
+  padding-bottom: 15px;
 }
 
 .desktop-thumbnail {
@@ -395,6 +396,7 @@ li {
 .label {
   position: absolute;
   top: -3px;
+  display: none;
   right: -5px;
   font-size: 0.7vw;
   padding: 4px 5px;
