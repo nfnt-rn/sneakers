@@ -24,6 +24,7 @@ function App() {
           showCart={showCart}
           cart={cart}
           setSidebar={setSidebar}
+          items={items}
         ></Navbar>
         <div className="desktop">
           <ImageBanner showGallery={showGallery} />

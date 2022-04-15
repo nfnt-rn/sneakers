@@ -388,6 +388,20 @@ li {
   cursor: pointer;
 }
 
+.label-container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  font-size: 0.7vw;
+  padding: 4px 5px;
+  background-color: red;
+  border-radius: 2px;
+}
+
 .cart-header-container {
   display: flex;
   align-items: center;
@@ -414,6 +428,16 @@ li {
   }
   .gallery-img-container .img-scroller {
     margin: 0 -30px;
+  }
+
+  .label {
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    font-size: 0.7vw;
+    padding: 4px 5px;
+    background-color: red;
+    border-radius: 2px;
   }
 
   .desktop {
@@ -514,6 +538,9 @@ li {
   }
   .product {
     margin-top: 40px;
+  }
+  .label {
+    top: -10px;
   }
 
   .cart-item {
